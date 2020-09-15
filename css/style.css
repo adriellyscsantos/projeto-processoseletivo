@@ -1,0 +1,270 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  background-color: #151515;
+}
+
+/* TITULOS */
+p {
+  color: white;
+  width: 70%;
+}
+
+h1 {
+  font-size: 4rem;
+  color: #e91e63;
+  margin-bottom: 10px;
+  margin: 0;
+}
+
+h2 {
+  text-align: left;
+  font-size: 2rem;
+  color: #e91e63;
+  margin-bottom: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Oswald", sans-serif;
+}
+
+/* HEADER */
+
+header {
+  height: 400px;
+  display: flex;
+  position: relative;
+}
+
+header::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 5px;
+  width: 100%;
+  bottom: 0;
+  background-image: linear-gradient(to right, #e040fb, #e91e63);
+}
+
+.black {
+  height: 400px;
+  width: 60%;
+  position: relative;
+}
+.header-imagem {
+  height: 100%;
+  background: url(../img/drifoto.jpg) no-repeat;
+  background-size: 100%;
+  background-position-y: 5%;
+}
+
+.black::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  opacity: 1;
+  background: url("../img/detail.svg") center center no-repeat;
+  top: 0;
+  right: 0;
+}
+
+.header-info {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 40%;
+  color: #000;
+  background: #151515;
+  padding-left: 80px;
+}
+
+.header-info p {
+  color: #fff;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.botao {
+  display: inline-flex;
+  background-color: #e91e63;
+  margin-top: 30px;
+  padding: 0.7rem 1.5rem;
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: 3rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  width: fit-content;
+  transition: all 0.5s ease-in-out;
+  border: 1px solid transparent;
+}
+
+/* SOBRE MIM */
+
+.sobre,
+#skills,
+#hobbies {
+  padding: 0 140px;
+  margin: auto;
+}
+
+.sobre-mim_info p {
+  color: #fff;
+}
+
+.sobre-mim_habilidades {
+  width: 30vw;
+  margin-left: 2rem;
+}
+
+.sobre {
+  margin: 30px 0;
+}
+
+/* HABILIDADES */
+
+#skills ul,
+#hobbies ul,
+#contato input,
+#contato textarea {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@keyframes borderanimation {
+  0% {
+    border-color: #e040fb;
+  }
+  50% {
+    border-color: #e91e63;
+  }
+  100% {
+    border-color: #e040fb;
+  }
+}
+
+#skills ul li,
+#hobbies ul li {
+  color: black;
+  padding: 30px 50px;
+  background: #424242;
+  margin-right: 30px;
+  border-radius: 10px;
+  border-left: 3px solid #e91e63;
+  animation: borderanimation 3s infinite;
+  cursor: pointer;
+  transition: transform 0.3s linear;
+}
+
+#skills ul li:hover,
+#hobbies ul li:hover {
+  transform: scale(1.2);
+}
+
+#skills ul li img,
+#hobbies ul li img {
+  width: 60px;
+  height: 60px;
+}
+
+#skills,
+#hobbies {
+  margin: 30px 0;
+}
+
+.botao_cv {
+  margin-top: 0;
+}
+
+.botao:hover {
+  background-image: linear-gradient(to right, #e040fb, #e91e63);
+  transition: ease-in 0.2s;
+}
+
+/* FOOTER */
+
+footer {
+  /* background-image: linear-gradient(to right, #e040fb, #e91e63); */
+  padding: 20px 140px 10px 140px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e91e63;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+
+footer ul li {
+  margin: 0 10px;
+  width: 30px;
+}
+
+footer p {
+  color: #fff;
+  font-size: 14px;
+}
+
+/* CONTATO */
+
+#contato label {
+  color: white;
+  font-size: 14px;
+  margin: 10px 0;
+  display: block;
+}
+
+#contato input,
+#contato textarea {
+  border-radius: 5px;
+  border: 1px solid #e91e63;
+  background: transparent;
+  color: #fff;
+  padding: 5px 10px;
+  resize: none;
+  width: 100%;
+  margin-top: 3px;
+}
+
+#contato input:focus,
+#contato textarea:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+#contato {
+  width: 100%;
+  padding: 0 140px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+#contato form {
+  width: 100%;
+}
+
+#contato button {
+  margin: 15px 0;
+}
+
+#contato .contact {
+  flex: 1;
+  margin-right: 30px;
+  flex-shrink: 0;
+}
